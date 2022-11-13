@@ -1,0 +1,10 @@
+.labelContact {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contactsInput {
+    border-radius: 10px;
+    background-color: rgb(192, 205, 216);
+    
+}
