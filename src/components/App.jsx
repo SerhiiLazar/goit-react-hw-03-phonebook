@@ -16,17 +16,13 @@ class App extends Component {
     const contactsParse = JSON.parse(contacts);
 
     if (contactsParse) {
-      this.setState({contacts: contactsParse});
+      this.setState({ contacts: contactsParse });
     }
-    console.log(contactsParse);
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if(this.state.contacts !== prevState.contacts){
-      
+    if (this.state.contacts !== prevState.contacts) {
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
-      console.log("Обновилось поле contacts");
-
     }
   }
 
@@ -53,7 +49,6 @@ class App extends Component {
   };
 
   render() {
-    console.log("App render");
     const { filter, contacts } = this.state;
     return (
       <div className={css.appBody}>
